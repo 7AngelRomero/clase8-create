@@ -78,14 +78,14 @@ body {
     margin-top: 20px;
 }
 
-.urls-nav a {
+.urls-nav {
     color: #ffd700;
     text-decoration: none;
     font-weight: bold;
     transition: color 0.2s;
 }
 
-.urls-nav a:hover {
+.urls-nav {
     color: #ff6600;
     text-decoration: underline;
 }
