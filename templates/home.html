@@ -1,0 +1,51 @@
+{% extends "_base.html" %}
+{% block content %}
+    <!--Header de la pagina-->
+    <header>
+        <h1>Inicio de la pagina</h1>
+        <nav>
+            <div class="urls-nav">
+                <h2>
+                    <a href="{% url 'post-list' %}">Lista de Posts</a> |
+                    <a href="{% url 'post-detail' 1 %}">Detalle de Post</a>
+                </h2>
+            </div>
+        </nav>
+    </header>
+    <section>
+        <article>
+            <h2 class="Honda-title"> Honda HSV-010 GT</h2>
+            <br>
+            <img class="Honda-img" src="https://upload.wikimedia.org/wikipedia/commons/a/a7/Ralph_Firman_2010_Super_GT_Fuji_400km_qualify_Super_Lap.jpg" alt="Acura HSV-010 GT" width="500" height="300">
+            <br>
+            <div class="Honda-description">
+                <p>El Honda HSV-010 GT es un automóvil de carreras desarrollado por Honda para competir en la serie Super GT de Japón. Fue diseñado para reemplazar al Honda NSX en la categoría GT500. >Cuenta con un motor V8 de 3.4 litros y una transmisión secuencial de seis velocidades. Su diseño aerodinámico y su chasis ligero le permiten alcanzar altas velocidades en las pistas. <br></p>
+                <p><br>El HSV-010 GT ha sido un competidor destacado en la Super GT, logrando múltiples victorias y campeonatos desde su debut en 2010. Su combinación de potencia, agilidad y tecnología avanzada lo convierte en uno de los autos más emblemáticos de la serie. Ha sido pilotado por algunos de los mejores pilotos de Japón y ha dejado una huella significativa en la historia del automovilismo japonés. Su legado continúa inspirando a nuevas generaciones de entusiastas del automovilismo.<br></p>
+                <p><br>Honda no fabricó este vehículo en masa para calle debido a la crisis financiera mundial y se aprovechó el desarrollo de este como vehículo para las carreras de GT. El desarrollo del deportivo para calle debía ser el rival para los deportivos japoneses Nissan GT-R y el Lexus LFA.Aunque Honda se retiró de la Fórmula 1 durante unas temporadas, no abandonó completamente la competición, participando en el campeonato GT500 con el HSV. Desde 2011, oficialmente se encuentra en desarrollo la tercera generación del NSX, el sucesor del HSV para calle.</p>
+            </div>
+        </article>
+    </section>
+    <section>
+        <article>
+            <img class="HSV-Prototype-img" src="https://www.motortrend.com/uploads/f/29131837.jpg" alt="Acura HSV-010 Prototype" width="500" height="300">                
+            <h2 class="HSV-Prototype-title">El Prototipo del HSV-010</h2>
+            <br>
+            <br>
+            <p>Cuando Honda decidió reemplazar al NSX-GT sabían que sólo tenían un hombre en el que confiar: Keinosuke Taki. Crear un reemplazo para el NSX seguramente sería una tarea desalentadora, pero como el líder del proyecto del chasis para la NSX en 1990 y el Líder Adjunto del Proyecto NS-GT, no había mejor hombre para el trabajo. Como nombrado líder del Proyecto de Desarrollo del HSV-010 GT Taki-san se propuso crear la "máquina relativa al final" y qué gran trabajo ha hecho.</p>
+            <p><br>Una de las primeras cosas que destacan sobre el HSV es su inusualmente corto-exterior-exterior. Super GT tiene restricciones de distancia entre ejes y sobrecarga y la mayoría de los equipos ocupan cerca del espacio lleno, pero Honda decidió probar algo diferente. En lugar de correr el overhang back lo mantuvieron corto y en su lugar montaron un ala externa en la derecha - una primera para Super GT. Qué efecto tendrá la parte trasera corta aún está a la espera de ser vista.</p>
+            <br>
+            <br>
+        </article>
+    </section>
+    <footer>
+        <p>Derechos reservados &copy; 2023</p>
+        <!-- comentario: redes sociales -->
+        <div class="social-media">
+            <p>
+                <a href="#" target="_parent">Facebook</a> 
+                <a href="#" target="_blank">Twitter</a> 
+                <a href="#" target="_top">Instagram</a>
+            </p>
+        </div>
+    </footer>
+{% endblock %}

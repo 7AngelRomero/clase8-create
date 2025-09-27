@@ -11,3 +11,6 @@ class PostListView(ListView):
 class PostDetailView(DetailView):
     model = Post
     template_name = "post-detail.html"
+
+def home(request):
+    return render(request, 'home.html')
