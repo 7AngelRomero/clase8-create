@@ -94,3 +94,9 @@ a:visited {
 .home-url {
     color: #ffd700;
 }
+
+.footer-nav {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}

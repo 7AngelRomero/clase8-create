@@ -2,6 +2,7 @@
 
 {% block content %} 
     {% for publication in post_list %}
+        <h1>Lista de Posts</h1>
             <ul>
                 <li>
                 <a href="{% url 'post-detail' publication.pk %}"><h2>{{ publication.title }}</h2></a>
