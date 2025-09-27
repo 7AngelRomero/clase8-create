@@ -34,6 +34,19 @@ body {
     color: #f4f4f4;
 }
 
+link {
+    color: #e82424; /* Color para enlaces NO visitados (azul, por ejemplo) */
+    text-decoration: none; /* Opcional: Quita el subrayado */
+}
+a:hover {
+    color: #0056b3; /* Color para enlaces al pasar el mouse (azul oscuro, por ejemplo) */
+    text-decoration: underline; /* Opcional: Añade subrayado al pasar el mouse */
+}
+a:visited {
+    color: #15c912; /* Color para enlaces visitados (azul oscuro, por ejemplo) */
+    text-decoration: none; /* Opcional: Quita el subrayado */
+}
+
 /* Selector por clases */
 
 .Honda-description {
@@ -78,14 +91,6 @@ body {
     margin-top: 20px;
 }
 
-.urls-nav {
+.home-url {
     color: #ffd700;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s;
-}
-
-.urls-nav {
-    color: #ff6600;
-    text-decoration: underline;
 }
