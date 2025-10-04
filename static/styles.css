@@ -34,17 +34,16 @@ body {
     color: #f4f4f4;
 }
 
-link {
-    color: #ffffff; /* Color para enlaces NO visitados (azul, por ejemplo) */
-    text-decoration: none; /* Opcional: Quita el subrayado */
-}
-a:hover {
-    color: #0056b3; /* Color para enlaces al pasar el mouse (azul oscuro, por ejemplo) */
-    text-decoration: underline; /* Opcional: Añade subrayado al pasar el mouse */
+a {
+    color: #ffffff !important; /* Color para enlaces NO visitados */
+    text-decoration: none !important; /* Quita el subrayado */
 }
 a:visited {
-    color: #15c912; /* Color para enlaces visitados (azul oscuro, por ejemplo) */
-    text-decoration: none; /* Opcional: Quita el subrayado */
+    color: #ffffff !important; /* Color para enlaces visitados */
+}
+a:hover {
+    color: #87aed8 !important; /* Color para enlaces al pasar el mouse */
+    text-decoration: none !important;
 }
 
 /* Selector por clases */

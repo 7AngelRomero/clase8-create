@@ -10,7 +10,23 @@
 <body>
     <!--Header de la pagina-->
     <header>
-        <h1>Inicio de la pagina</h1>
+        <h1>
+            {% if request.resolver_match.url_name == 'home' %}
+                Inicio
+            {% elif request.resolver_match.url_name == 'post-list' %}
+                Lista de Posts
+            {% elif request.resolver_match.url_name == 'post-detail' %}
+                Detalle del Post
+            {% elif request.resolver_match.url_name == 'post-new' %}
+                Nuevo Post
+            {% elif request.resolver_match.url_name == 'post-edit' %}
+                Editar Post
+            {% elif request.resolver_match.url_name == 'post-delete' %}
+                Eliminar Post
+            {% else %}
+                {{ request.resolver_match.url_name|title }}
+            {% endif %}
+        </h1>
         <nav class="footer-nav">
                 <h2>
                     <a class="home-url" href="{% url 'home' %}">Inicio</a> |
