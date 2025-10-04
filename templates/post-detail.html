@@ -7,4 +7,7 @@
         <p>{{ post.body }}</p>
         <p>{{ post.created_at }}</p>
         <p>{{ post.updated_at }}</p>
+        <a href="{% url 'post-edit' post.id%}">Edición</a>
+        <a href="{% url 'post-delete' post.id%}">Borrar</a>
+        
 {% endblock %}

@@ -10,15 +10,29 @@
 <body>
     <!--Header de la pagina-->
     <header>
-        <h1>Inicio de la pagina</h1>
-        <nav>
-            <div class="urls-nav">
-                <h2>
-                    <a href="{% url 'home' %}">Inicio</a> |
-                    <a href="{% url 'post-new' %}">Nuevo Post</a> |
-                    <a href="{% url 'post-list' %}">Lista de Posts</a>
-                </h2>
-            </div>
+        <h1>
+            {% if request.resolver_match.url_name == 'home' %}
+                Inicio
+            {% elif request.resolver_match.url_name == 'post-list' %}
+                Lista de Posts
+            {% elif request.resolver_match.url_name == 'post-detail' %}
+                Detalle del Post
+            {% elif request.resolver_match.url_name == 'post-new' %}
+                Nuevo Post
+            {% elif request.resolver_match.url_name == 'post-edit' %}
+                Editar Post
+            {% elif request.resolver_match.url_name == 'post-delete' %}
+                Eliminar Post
+            {% else %}
+                {{ request.resolver_match.url_name|title }}
+            {% endif %}
+        </h1>
+        <nav class="navbar">
+                <ul>
+                    <li><a href="{% url 'home' %}">Inicio</a></li>
+                    <li><a href="{% url 'post-new' %}">Nuevo Post</a></li>
+                    <li><a href="{% url 'post-list' %}">Lista de Posts</a></li>
+                </ul>
         </nav>
     </header>
     {% block content %}

@@ -7,15 +7,15 @@ header {
 }
 
 * {
-margin: 0;
+margin: 0 !important;
 }
 
 article {
-    background-color: #444;
-    padding: 20px;
-    margin: 25px;
-    border-radius: 5px;
-    font-size: 20px;
+    background-color: #444 !important;
+    padding: 20px !important;
+    margin: 25px !important;
+    border-radius: 5px !important;
+    font-size: 20px !important;
 }
 
 footer {
@@ -33,6 +33,19 @@ body {
     background-color: #333;
     color: #f4f4f4;
 }
+
+a {
+    color: #ffffff !important; /* Color para enlaces NO visitados */
+    text-decoration: none !important; /* Quita el subrayado */
+}
+a:visited {
+    color: #ffffff !important; /* Color para enlaces visitados */
+}
+a:hover {
+    color: #87aed8 !important; /* Color para enlaces al pasar el mouse */
+    text-decoration: none !important;
+}
+
 
 /* Selector por clases */
 
@@ -78,14 +91,27 @@ body {
     margin-top: 20px;
 }
 
-.urls-nav {
+.home-url {
     color: #ffd700;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.2s;
 }
 
-.urls-nav {
-    color: #ff6600;
-    text-decoration: underline;
+.footer-nav {
+    color: #ffffff;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.navbar ul {
+    list-style-type: none;
+    padding: 15px;
+    background-color: #153b7d;
+    margin: 0;
+}
+
+.navbar a {
+    color: #ffffff !important;
+    padding: 14px 20px;
+    text-decoration: none !important;
+    text-align: center;
+    
 }
