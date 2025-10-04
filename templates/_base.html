@@ -23,6 +23,8 @@
                 Editar Post
             {% elif request.resolver_match.url_name == 'post-delete' %}
                 Eliminar Post
+            {% elif request.resolver_match.url_name == 'login' %}
+                Iniciar Sesión
             {% else %}
                 {{ request.resolver_match.url_name|title }}
             {% endif %}
@@ -32,6 +34,12 @@
                 <li><a class="home-url" href="{% url 'home' %}">Inicio</a></li>
                 <li><a class="post-new-url" href="{% url 'post-new' %}">Nuevo Post</a></li>
                 <li><a class="post-list-url" href="{% url 'post-list' %}">Lista de Posts</a></li>
+                {% if user.is_authenticated %}
+                    <li class="user-info">Hola, {{ user.username }}!</li>
+                    <li class="logout-btn"><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                {% else %}
+                    <li class="login-btn"><a class="login-url" href="{% url 'login' %}">Iniciar Sesión</a></li>
+                {% endif %}
             </ul>
         </nav>
     </header>
