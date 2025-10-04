@@ -27,12 +27,12 @@
                 {{ request.resolver_match.url_name|title }}
             {% endif %}
         </h1>
-        <nav class="footer-nav">
-                <h2>
-                    <a class="home-url" href="{% url 'home' %}">Inicio</a> |
-                    <a class="post-new-url" href="{% url 'post-new' %}">Nuevo Post</a> |
-                    <a class="post-list-url" href="{% url 'post-list' %}">Lista de Posts</a>
-                </h2>
+        <nav class="navbar">
+            <ul>
+                <li><a class="home-url" href="{% url 'home' %}">Inicio</a></li>
+                <li><a class="post-new-url" href="{% url 'post-new' %}">Nuevo Post</a></li>
+                <li><a class="post-list-url" href="{% url 'post-list' %}">Lista de Posts</a></li>
+            </ul>
         </nav>
     </header>
     {% block content %}
