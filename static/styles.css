@@ -1,7 +1,7 @@
 /* Selector por etiqueta */
 
 header {
-    background-color: #194899;
+    background-color: #10377a;
     padding: 20px;
     text-align: center;
 }
@@ -102,11 +102,17 @@ a:hover {
 }
 
 
+.navbar {
+    background-color: #0d2d5f;
+    margin-top: 10px;
+}
+
 .navbar ul {
     list-style-type: none;
     padding: 0px;
     margin: 0px;
     overflow: hidden;
+    background-color: #0d2d5f;
 }
 
 .navbar a {
@@ -119,7 +125,7 @@ a:hover {
 }
 
 .navbar a:hover {
-    background-color: #10377a;
+    background-color: #194899;
 }
 
 .navbar li {
@@ -137,3 +143,20 @@ a:hover {
     padding: 14px;
     background-color: transparent;
 }
+
+.logout-button {
+    background: none;
+    border: none;
+    color: #ffffff !important;
+    padding: 14px;
+    text-decoration: none;
+    cursor: pointer;
+    font-size: inherit;
+    font-family: inherit;
+}
+
+.logout-button:hover {
+    background-color: #194899;
+    color: #ffffff !important;
+}
+

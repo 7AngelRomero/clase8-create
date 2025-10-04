@@ -34,10 +34,17 @@
                 <li><a class="home-url" href="{% url 'home' %}">Inicio</a></li>
                 <li><a class="post-new-url" href="{% url 'post-new' %}">Nuevo Post</a></li>
                 <li><a class="post-list-url" href="{% url 'post-list' %}">Lista de Posts</a></li>
+
                 {% if user.is_authenticated %}
                     <li class="user-info">Hola, {{ user.username }}!</li>
-                    <li class="logout-btn"><a href="{% url 'logout' %}">Cerrar Sesión</a></li>
+                    <li class="logout-btn">
+                        <form method="post" action="{% url 'logout' %}" style="display: inline;">
+                            {% csrf_token %}
+                            <button type="submit" class="logout-button">Cerrar Sesión</button>
+                        </form>
+                    </li>
                 {% else %}
+                
                     <li class="login-btn"><a class="login-url" href="{% url 'login' %}">Iniciar Sesión</a></li>
                 {% endif %}
             </ul>
