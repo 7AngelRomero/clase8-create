@@ -1,15 +1,17 @@
 {% extends '_base.html' %}
 
 {% block content %} 
-    <h2>Lista de Posts</h2>
-    {% for publication in object_list %}
-        <article>
-            <a href="{% url 'post-detail' publication.pk %}"><h3>{{ publication.title }}</h3></a>
-            <p><strong>Autor:</strong> {{ publication.author }}</p>
-            <p>{{ publication.body|truncatewords:20 }}</p>
-            <p><small>{{ publication.created_at }}</small></p>
-        </article>
-    {% empty %}
-        <p>No hay posts disponibles.</p>
-    {% endfor %}
+    <div class="post-list-container">
+        <h2>Lista de Posts</h2>
+        {% for publication in object_list %}
+            <article>
+                <a href="{% url 'post-detail' publication.pk %}"><h3>{{ publication.title }}</h3></a>
+                <p><strong>Autor:</strong> {{ publication.author }}</p>
+                <p>{{ publication.body|truncatewords:20 }}</p>
+                <p><small>{{ publication.created_at }}</small></p>
+            </article>
+        {% empty %}
+            <p class="no-posts">No hay posts disponibles.</p>
+        {% endfor %}
+    </div>
 {% endblock content %}

@@ -1,13 +1,22 @@
 {% extends '_base.html' %}
 
 {% block content %}
-    <h2>Detalle del post </h2>
-        <h3>{{ object.title }}</h3>
-        <p><strong>Autor:</strong> {{ object.author }}</p>
-        <p>{{ object.body }}</p>
-        <p><strong>Creado:</strong> {{ object.created_at }}</p>
-        <p><strong>Actualizado:</strong> {{ object.updated_at }}</p>
-        <a href="{% url 'post-edit' object.pk %}">Editar</a> |
-        <a href="{% url 'post-delete' object.pk %}">Eliminar</a> |
-        <a href="{% url 'post-list' %}">Volver a la lista</a>
+    <div class="post-detail-container">
+        <h1>{{ object.title }}</h1>
+        
+        <div class="post-content">
+            <ul class="post-meta">
+                <li><strong>Autor:</strong> {{ object.author }}</li>
+                <li><strong>Contenido:</strong> {{ object.body }}</li>
+                <li><strong>Creado:</strong> {{ object.created_at }}</li>
+                <li><strong>Actualizado:</strong> {{ object.updated_at }}</li>
+            </ul>
+        </div>
+        
+        <div class="post-actions">
+            <a href="{% url 'post-edit' object.pk %}" class="btn btn-edit">Editar</a>
+            <a href="{% url 'post-delete' object.pk %}" class="btn btn-delete">Eliminar</a>
+            <a href="{% url 'post-list' %}" class="btn btn-back">Volver a la lista</a>
+        </div>
+    </div>
 {% endblock %}
